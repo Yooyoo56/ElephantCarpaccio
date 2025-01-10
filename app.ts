@@ -9,7 +9,7 @@ document.body.style.fontFamily = "Arial, sans-serif"; // You can change Arial to
 let message: string = "[ Bienvenue sur le Calculateur de Commande! 🛒 ] ";
 
 let contributors: string =
-	"Projet réalisé par: Aïssetou SACKO🧋  Yoojeong TAK🌵  Wenchi WANG🍬 ";
+	"Projet réalisé par: Aïssetou SACKO🧋  Yoojeong TAK🥐  Wenchi WANG🍬 ";
 
 let subHeading = document.createElement("h2");
 subHeading.textContent = contributors;
@@ -26,7 +26,7 @@ let form = document.createElement("form");
 
 // Create the 'Quantité' field
 let quantityLabel = document.createElement("label");
-quantityLabel.textContent = "Quantité:";
+quantityLabel.textContent = "🛍️ Quantité:";
 quantityLabel.setAttribute("for", "quantity");
 let quantityInput = document.createElement("input");
 quantityInput.type = "number";
@@ -41,10 +41,11 @@ form.appendChild(document.createElement("br"));
 
 // Create the 'Prix de l’article' field
 let priceLabel = document.createElement("label");
-priceLabel.textContent = "Prix de l’article ($):";
+priceLabel.textContent = "💵 Prix de l’article ($):";
 priceLabel.setAttribute("for", "price");
 let priceInput = document.createElement("input");
 priceInput.type = "number";
+priceInput.step = "0.01";
 priceInput.id = "price";
 priceInput.name = "price";
 priceInput.min = "1"; // Ensure the value is greater than 0
@@ -56,7 +57,7 @@ form.appendChild(document.createElement("br"));
 
 // Create the 'État' field (dropdown list)
 let stateLabel = document.createElement("label");
-stateLabel.textContent = "État:";
+stateLabel.textContent = "🗽 État:";
 stateLabel.setAttribute("for", "state");
 let stateSelect = document.createElement("select");
 stateSelect.id = "state";
@@ -78,7 +79,7 @@ form.appendChild(document.createElement("br"));
 // Create the Submit button
 let submitButton = document.createElement("button");
 submitButton.type = "submit";
-submitButton.textContent = "Submit";
+submitButton.textContent = "Submit 🩵";
 
 form.appendChild(submitButton);
 
@@ -163,7 +164,7 @@ form.addEventListener("submit", (event) => {
 
 		// Update results on the page
 		resultsDiv.innerHTML = `
-			<h2>Résultats:</h2>
+			<h2>✅ Résultats:</h2>
 			<p><strong>Total sans remise ni taxes:</strong> $${totalPrice.toFixed(2)}</p>
 			<p><strong>Total après remise:</strong> $${discountedPrice.toFixed(2)}</p>
 			<p><strong>Taxe (${state}):</strong> $${tax.toFixed(2)}</p>
